@@ -621,6 +621,12 @@ summary(enet_mod)
 ```
 
 ```{r}
+# This returns the coefficients for our elastic net model.
+coef(best_mod, s="lambda.1se")
+```
+
+
+```{r}
 # Also heres the code for the plot I put in the slides
 g <- ggplot(returns, aes(x = kickedto_5yardBin, y = yard_result, color = kickedto_5yardBin)) +
      labs(x = '5-Yard Bin Kicked To', y = 'Yard Result')
